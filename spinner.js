@@ -19,7 +19,6 @@ setTimeout(() => {
   process.stdout.write('\r|   ');
 }, 900);
 
-// ... fill in the rest yourself ...
 setTimeout(() => {
   process.stdout.write('\r/   ');
 }, 1100);
@@ -34,6 +33,11 @@ setTimeout(() => {
 }, 1500);
 
 setTimeout(() => {
+  // Need to escape the backslash since it's a special character.
   process.stdout.write('\r|   ');
-  console.log();
 }, 1700);
+
+setTimeout(() => {
+  // Need to escape the backslash since it's a special character.
+  console.log();
+}, 1900);
